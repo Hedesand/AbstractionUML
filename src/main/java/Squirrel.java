@@ -23,19 +23,25 @@ public class Squirrel {
                 }
                 else{
                     return true;
-                };
+                }
             case 1:
-                if(numOfConesInNest < 1){
+            case 2:
+                if(numOfConesInNest < 2){
                     return false;
                 }
                 else{
                     return true;
                 }
-            case 2:
-                break;
+            case 3:
+            case 4:
+                if(numOfConesInNest < 3){
+                    return false;
+                }
+                else{
+                    return true;
+                }
             default:
-
+                return false;
         }
-        return false;
     }
 }
