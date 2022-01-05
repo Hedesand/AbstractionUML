@@ -2,13 +2,26 @@ import java.util.List;
 
 public class PineTree {
 
-    int numOfCones;
-    List<Squirrel> squirrels;
-    Owl owl;
-    int age;
-    int height;
+    private List<Squirrel> squirrels;
+    private int numOfCones;
+    private Owl owl;
+    private int age;
+    private int height;
 
-    booelan fall(arg1, arg2, arg3){
+    PineTree(int numOfCones, Owl owl, int age, int height){
+        this.numOfCones = numOfCones;
+        this.owl = owl;
+        this.age = age;
+        this.height = height;
 
     }
+
+    boolean fall(int age, int height, List squirrels){
+        if(age > 67 && height > 65 && squirrels.size() > 5){
+
+        }
+
+        return true;
+    }
+
 }
