@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Squirrel {
 
     private int weight;
@@ -6,19 +8,63 @@ public class Squirrel {
     private String subspecies;
     private int numOfKittens;
 
-    Squirrel(int weight, int numOfConesInNest, int age, String subspecies, int numOfKittens){
+    Squirrel(int weight, int age, String subspecies){
         this.weight = weight;
-        this.numOfConesInNest = numOfConesInNest;
         this.age = age;
         this.subspecies = subspecies;
-        this.numOfKittens = numOfKittens;
 
     }
 
-    public boolean eat(int numOfConesInNest, int numOfKittens){
-        switch (numOfKittens) {
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public int getNumOfConesInNest() {
+        return numOfConesInNest;
+    }
+
+    public void setNumOfConesInNest(int numOfConesInNest) {
+        this.numOfConesInNest = numOfConesInNest;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getSubspecies() {
+        return subspecies;
+    }
+
+    public void setSubspecies(String subspecies) {
+        this.subspecies = subspecies;
+    }
+
+    public int getNumOfKittens() {
+        return numOfKittens;
+    }
+
+    public void setNumOfKittens(int numOfKittens) {
+        this.numOfKittens = numOfKittens;
+    }
+
+    public boolean eat(){
+        Random randomNumOfCones = new Random();
+        setNumOfConesInNest(randomNumOfCones.nextInt(10));
+
+        Random randomNumOfKittens = new Random();
+        setNumOfKittens(randomNumOfKittens.nextInt(4));
+
+        switch (getNumOfKittens()) {
             case 0:
-                if(numOfConesInNest < 1){
+                if(getNumOfConesInNest() < 1){
                     return false;
                 }
                 else{
@@ -26,7 +72,7 @@ public class Squirrel {
                 }
             case 1:
             case 2:
-                if(numOfConesInNest < 2){
+                if(getNumOfConesInNest() < 2){
                     return false;
                 }
                 else{
@@ -34,7 +80,7 @@ public class Squirrel {
                 }
             case 3:
             case 4:
-                if(numOfConesInNest < 3){
+                if(getNumOfConesInNest() < 3){
                     return false;
                 }
                 else{

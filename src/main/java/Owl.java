@@ -12,6 +12,38 @@ public class Owl {
         this.alive = alive;
     }
 
+    public int getWingSpan() {
+        return wingSpan;
+    }
+
+    public boolean isHungry() {
+        return hungry;
+    }
+
+    public char getSex() {
+        return sex;
+    }
+
+    public boolean isAlive() {
+        return alive;
+    }
+
+    public void setWingSpan(int wingSpan) {
+        this.wingSpan = wingSpan;
+    }
+
+    public void setHungry(boolean hungry) {
+        this.hungry = hungry;
+    }
+
+    public void setSex(char sex) {
+        this.sex = sex;
+    }
+
+    public void setAlive(boolean alive) {
+        this.alive = alive;
+    }
+
     boolean eat(){
         return true;
     }
