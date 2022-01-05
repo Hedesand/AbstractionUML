@@ -1,0 +1,5 @@
+Genomskilnig - Aggregation entiteten/klassen kan leva självsständigt. En bil behöver ett däck men däcket behvöver inte bilen, den kan t.ex ha en buss.
+
+Svart - Composition - Entiteten/klassen tas bort om det den är associerad till tas bort. En person behöver en mänsklig hjärna och hjärnan behöver en persom för att fungera. tas personen bort så försvinenr hjärnar och vice versa.
+
+Så ekorren samt ugglan kan leva utan trädet och trädet utan djuren. Frågan är hur länge skulle en ekorre kunna leva helt utan träd? haha.
