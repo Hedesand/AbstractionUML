@@ -1,8 +1,10 @@
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class PineTree {
 
-    private List<Squirrel> squirrels;
+    private List<Squirrel> squirrels = new ArrayList<>();
     private int numOfCones;
     private Owl owl;
     private int age;
@@ -15,16 +17,13 @@ public class PineTree {
         this.height = height;
 
     }
-    PineTree(){
-
-    }
 
     public List<Squirrel> getSquirrels() {
         return squirrels;
     }
 
-    public void setSquirrels(List<Squirrel> squirrels) {
-        this.squirrels = squirrels;
+    public void setSquirrels(Squirrel squirrel) {
+        this.squirrels.add(squirrel);
     }
 
     public int getNumOfCones() {
@@ -67,15 +66,41 @@ public class PineTree {
         this.disease = disease;
     }
 
-    boolean fall(boolean lumberjack){
-        if(age > 67 && height > 65 && squirrels.size() > 5){
-            owl.setAlive(false);
+    boolean fall(int numOfAdultSquirrel){
+        int numOfSquirrelsInTree = 0;
+        for(int i = 0; i <=numOfAdultSquirrel; i++){
+            Random ranWeight = new Random();
+            Random ranAge = new Random();
+            Squirrel sq = new Squirrel(ranWeight.nextDouble(), ranAge.nextInt(15),"Pine Tree Squirrel");
+            setSquirrels(sq);
+        }
+        for (Squirrel squirrel : squirrels) {
+            squirrel.eat(true);
+            numOfSquirrelsInTree += (1 + squirrel.getNumOfKittens());
+        }
+        if(numOfSquirrelsInTree > 10){
+            setDisease(true);
+        }
+        else{
+            setDisease(false);
+        }
+        if(age > 67 && height > 65 && numOfSquirrelsInTree > 5){
+            System.out.println("1");
+            /*owl.setAlive(false);*/
             return true;
         }
         else if(height > 100) {
+            System.out.println("2");
+
             return true;
         }
-        return true;
+        else if(isDisease()){
+            System.out.println("3");
+            return true;
+        }
+        System.out.println("4");
+
+        return false;
     }
 
 }
