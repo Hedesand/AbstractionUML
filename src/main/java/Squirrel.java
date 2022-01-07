@@ -23,7 +23,7 @@ public class Squirrel {
                 }
                 else{
                     return true;
-                };
+                }
             case 1:
                 if(numOfConesInNest < 1){
                     return false;
