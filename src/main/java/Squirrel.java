@@ -15,7 +15,11 @@ public class Squirrel {
             "frös den till. Det var som om den hade ögon i nacken.\n" +
             "Orre kände på sig att något var fel och att det var bäst att skynda tillbaka till hem trygga hem.";
 
+<<<<<<< HEAD
     Squirrel(double weight, int age, String subspecies) {
+=======
+    Squirrel(double weight, int age, String subspecies){
+>>>>>>> bda1cbea9b1f1bf15105b487929b6652cbab14e0
         this.weight = weight;
         this.age = age;
         this.subspecies = subspecies;
@@ -78,6 +82,7 @@ public class Squirrel {
         this.story += story;
     }
 
+<<<<<<< HEAD
     public boolean eat(boolean isOwlNear) {
         Random randomNumOfCones = new Random();
         setNumOfConesInNest(randomNumOfCones.nextInt(10));
@@ -94,33 +99,75 @@ public class Squirrel {
             if (getNumOfKittens() > 0) {
                 setNumOfKittens(getNumOfKittens() - 1);
                 setNumOfConesInNest(getNumOfConesInNest() / 2);
+=======
+    public boolean eat(boolean isOwlNear){
+        Random randomNumOfCones = new Random();
+        setNumOfConesInNest(randomNumOfCones.nextInt(10));
+        setStory("\nHemma väntade " + getNumOfConesInNest() + " st goda kottar. \n" );
+        Random randomNumOfKittens = new Random();
+        setNumOfKittens(randomNumOfKittens.nextInt(4));
+        if(getNumOfKittens()>1) {
+            setStory("Tillsammans med kottarna väntade hans " + getNumOfKittens() + " gulliga ungar på hans återvändo.\n");
+        }
+
+        if(isOwlNear){
+            setScared(true);
+            setStory("Ugglan Uffe svävade över huvudet på Orre medans han sprang hemåt. Orre var väldigt rädd. \n");
+            if(getNumOfKittens()>0) {
+                setNumOfKittens(getNumOfKittens() - 1);
+                setNumOfConesInNest(getNumOfConesInNest()/2);
+>>>>>>> bda1cbea9b1f1bf15105b487929b6652cbab14e0
                 setStory("Strax innan Orre nådde boet såg han ugglan Uffe hastigt svepa förbi, i klorna hade han en av Orres älskade ungar och hälften av kottarna föll till marken.\n");
             }
         }
         switch (getNumOfKittens()) {
             case 0:
+<<<<<<< HEAD
                 if (getNumOfConesInNest() < 1) {
                     setStory("När Orre väl kom till boet inser han att kottarna är slut och han måste bege sig ut i den farliga skogen och leta efter mer. ");
                     return false;
                 } else {
+=======
+                if(getNumOfConesInNest() < 1){
+                    setStory("När Orre väl kom till boet inser han att kottarna är slut och han måste bege sig ut i den farliga skogen och leta efter mer. ");
+                    return false;
+                }
+                else{
+>>>>>>> bda1cbea9b1f1bf15105b487929b6652cbab14e0
                     setStory("När Orre väl kom till boet kunde han i alla fall äta sig mätt. ");
                     return true;
                 }
             case 1:
             case 2:
+<<<<<<< HEAD
                 if (getNumOfConesInNest() < 2) {
                     setStory("När Orre väl kom till boet inser han att kottarna inte räcker till dom båda, så Orre erbjuder sin älskade unge den sista kotten och Orre får bege sig ut hungrig för att leta efter fler ");
                     return false;
                 } else {
+=======
+                if(getNumOfConesInNest() < 2){
+                    setStory("När Orre väl kom till boet inser han att kottarna inte räcker till dom båda, så Orre erbjuder sin älskade unge den sista kotten och Orre får bege sig ut hungrig för att leta efter fler ");
+                    return false;
+                }
+                else{
+>>>>>>> bda1cbea9b1f1bf15105b487929b6652cbab14e0
                     setStory("När Orre väl kom till boet kunde han och hans älskade unge i alla fall äta sig mätta. ");
                     return true;
                 }
             case 3:
             case 4:
+<<<<<<< HEAD
                 if (getNumOfConesInNest() < 3) {
                     setStory("När Orre väl kom till boet inser han att kottarna inte räcker till dom alla, så Orre erbjuder sin älskade ungar dom sista kottarna och Orre får bege sig ut hungrig för att leta efter fler ");
                     return false;
                 } else {
+=======
+                if(getNumOfConesInNest() < 3){
+                    setStory("När Orre väl kom till boet inser han att kottarna inte räcker till dom alla, så Orre erbjuder sin älskade ungar dom sista kottarna och Orre får bege sig ut hungrig för att leta efter fler ");
+                    return false;
+                }
+                else{
+>>>>>>> bda1cbea9b1f1bf15105b487929b6652cbab14e0
                     setStory("När Orre väl kom till boet kunde han och hans älskade ungar i alla fall äta sig mätta. ");
                     return true;
                 }
