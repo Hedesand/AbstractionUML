@@ -66,7 +66,7 @@ public class PineTree {
         this.disease = disease;
     }
 
-    boolean fall(int numOfAdultSquirrel){
+   public String fall(int numOfAdultSquirrel){
         int numOfSquirrelsInTree = 0;
         for(int i = 0; i <=numOfAdultSquirrel; i++){
             Random ranWeight = new Random();
@@ -85,22 +85,16 @@ public class PineTree {
             setDisease(false);
         }
         if(age > 67 && height > 65 && numOfSquirrelsInTree > 5){
-            System.out.println("1");
             /*owl.setAlive(false);*/
-            return true;
+            return "Tallen knäcktes på grund av att den var gammal och för hög. Ekorrarna hade också försvagat stammen.";
         }
         else if(height > 100) {
-            System.out.println("2");
-
-            return true;
+            return "Trädet var för högt och knäcktes på mitten";
         }
         else if(isDisease()){
-            System.out.println("3");
-            return true;
+            return "I trädet bodde för många ekorrar som gjorde trädet sjukt och en dag så föll trädet";
         }
-        System.out.println("4");
-
-        return false;
+        return "something";
     }
 
 }
