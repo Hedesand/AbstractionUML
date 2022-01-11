@@ -15,7 +15,7 @@ public class Squirrel {
             "frös den till. Det var som om den hade ögon i nacken.\n" +
             "Orre kände på sig att något var fel och att det var bäst att skynda tillbaka till hem trygga hem.";
 
-    Squirrel(double weight, int age, String subspecies){
+    Squirrel(double weight, int age, String subspecies) {
         this.weight = weight;
         this.age = age;
         this.subspecies = subspecies;
