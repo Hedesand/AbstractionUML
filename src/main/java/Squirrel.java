@@ -1,8 +1,7 @@
 import java.util.Random;
 
-public class Squirrel {
+public class Squirrel extends Animal{
 
-    private double weight;
     private int numOfConesInNest;
     private int age;
     private String subspecies;
@@ -15,25 +14,14 @@ public class Squirrel {
             "frös den till. Det var som om den hade ögon i nacken.\n" +
             "Orre kände på sig att något var fel och att det var bäst att skynda tillbaka till hem trygga hem.";
 
-    Squirrel(double weight, int age, String subspecies) {
-        this.weight = weight;
+    public Squirrel(int age, String subspecies) {
         this.age = age;
         this.subspecies = subspecies;
-
-    }
-
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
     }
 
     public int getNumOfConesInNest() {
         return numOfConesInNest;
     }
-
     public void setNumOfConesInNest(int numOfConesInNest) {
         this.numOfConesInNest = numOfConesInNest;
     }
@@ -41,7 +29,6 @@ public class Squirrel {
     public int getAge() {
         return age;
     }
-
     public void setAge(int age) {
         this.age = age;
     }
@@ -76,6 +63,11 @@ public class Squirrel {
 
     public void setStory(String story) {
         this.story += story;
+    }
+
+    @Override
+    public boolean eat(Object food) {
+        return false;
     }
 
     public boolean eat(boolean isOwlNear){

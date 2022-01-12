@@ -3,7 +3,7 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 
-    Squirrel orre = new Squirrel(0.3,5,"Pine Tree Squirrel");
+    Squirrel orre = new Squirrel(3,"Pine Tree Squirrel");
     Random randBool = new Random();
     boolean rand = randBool.nextBoolean();
     boolean gotToEat = orre.eat(rand);

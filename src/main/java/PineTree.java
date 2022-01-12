@@ -71,7 +71,7 @@ public class PineTree {
         for(int i = 0; i <=numOfAdultSquirrel; i++){
             Random ranWeight = new Random();
             Random ranAge = new Random();
-            Squirrel sq = new Squirrel(ranWeight.nextDouble(), ranAge.nextInt(15),"Pine Tree Squirrel");
+            Squirrel sq = new Squirrel(ranAge.nextInt(15),"Pine Tree Squirrel");
             setSquirrels(sq);
         }
         for (Squirrel squirrel : squirrels) {

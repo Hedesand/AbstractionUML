@@ -1,13 +1,14 @@
 import java.util.Random;
 
-public class Owl {
+public class Owl extends Animal{
 
     private int wingSpan;
     private boolean hungry;
     private char sex;
     private boolean alive;
 
-    Owl(int wingSpan, char sex, boolean alive){
+    public Owl(int wingSpan, char sex, boolean alive){
+        super();
         this.wingSpan = wingSpan;
         this.sex = sex;
         this.alive = alive;
@@ -43,6 +44,11 @@ public class Owl {
 
     public void setAlive(boolean alive) {
         this.alive = alive;
+    }
+
+    @Override
+    public boolean eat(Object food) {
+        return false;
     }
 
     public boolean eat(){
